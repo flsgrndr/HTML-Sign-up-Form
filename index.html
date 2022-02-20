@@ -14,21 +14,26 @@
         <h2>Vacation Contest Sign-Up Form</h2>
         <form method="GET" action="results.html">
             <div>
-                <label for="firstname">Your First Name</label>
-                <input type="text" id="firstname" name="firstname">
-                <label for="lastname">Your Last Name</label>
-                <input type="text" id="lastname" name="lastname">
+                <label for="firstname">Your First Name <span class="required-field">*</span></label>
+                <input type="text" id="firstname" name="firstname" minlength="2" max length="35" required>
+                <label for="lastname">Your Last Name <span class="required-field">*</span></label>
+                <input type="text" id="lastname" name="lastname" minlength="2" maxlength="35" required>
+                <label for="age">Your Age <span class="required-field">*</span></label>
+                <input type="number" id="age" name="age" min="21" max="120" required>
+                <h5>One must be age 21 or older to enter!</h5>
+                <label for="password">Your Secret Code (must be 6 alphanumeric characters) <span class="required-field">*</span></label>
+                <input type="password" id="password" name="password" pattern="[A-Za-z0-9]{6}" required>
             </div>
             <fieldset>
                 <legend>Your Contact info</legend>
-                <label for="email">Your Email</label>
-                <input type="text" id="email" name="email">
-                <label for="address">Your Street Address</label>
-                <input type="text" id="address" name="address">
-                <label for="city">City</label>
-                <input type="text" id="city" name="city">
-                <label for="state">State</label>
-                <select name="state"> 
+                <label for="email">Your Email <span class="required-field">*</span></label>
+                <input type="email" id="email" name="email" required>
+                <label for="address">Your Street Address <span class="required-field">*</span></label>
+                <input type="text" id="address" name="address" required>
+                <label for="city">City <span class="required-field">*</span></label>
+                <input type="text" id="city" name="city" required>
+                <label for="state">State <span class="required-field">*</span></label>
+                <select name="state" required> 
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
                     <option value="AZ">Arizona</option>
@@ -79,8 +84,8 @@
                     <option value="WV">West Virginia</option>
                     <option value="WY">Wyoming</option>
                 </select>
-                <label for="zip">Zip Code</label>
-                <input type="text" id="zip" name="zip">
+                <label for="zip">Zip Code <span class="required-field">*</span></label>
+                <input type="text" id="zip" name="zip" pattern="[0-9]{5}" title="5-Digit US ZIP Code" required>
             </fieldset>
 
             <fieldset>
